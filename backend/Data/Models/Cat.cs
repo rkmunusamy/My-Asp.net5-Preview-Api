@@ -1,14 +1,16 @@
-﻿using backend.Data.Models;
+﻿using backend.Data;
+using backend.Data.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace backend.Models.Models
 {
+    using static Validation.Cat;
     public class Cat
     {
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(2000)]
+        [MaxLength(MaxDescriptionLength)]
         public string Description { get; set; }
         [Required]
         public string ImageUrl { get; set; }

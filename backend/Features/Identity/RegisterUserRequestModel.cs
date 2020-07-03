@@ -1,7 +1,6 @@
-﻿namespace backend.Models.Models.Identity
+﻿namespace backend.Features.Identity
 {
     using System.ComponentModel.DataAnnotations;
-
     public class RegisterUserRequestModel
     {
         [Required]

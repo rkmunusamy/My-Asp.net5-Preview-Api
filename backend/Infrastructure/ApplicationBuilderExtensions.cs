@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using System.Runtime.CompilerServices;
+﻿using backend.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using backend.Data;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace backend.Infrastructure
 {
@@ -10,7 +9,7 @@ namespace backend.Infrastructure
     {
         public static void ApplyMigrations(this IApplicationBuilder app)
         {
-            using var services  = app.ApplicationServices.CreateScope();
+            using var services = app.ApplicationServices.CreateScope();
             var dbContext = services.ServiceProvider.GetService<BackendDbContext>();
             dbContext.Database.Migrate();
         }

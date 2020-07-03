@@ -1,11 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace backend.Models.Cats
+﻿namespace backend.Models.Cats
 {
+    using System.ComponentModel.DataAnnotations;
     using static Data.Validation.Cat;
     public class CreateCatRequestModel
     {
-        [Required]
         [MaxLength(MaxDescriptionLength)]
         public string Description { get; set; }
         [Required]

@@ -1,10 +1,10 @@
-﻿namespace backend.Controllers
+﻿namespace backend.Features
 {
     using Microsoft.AspNetCore.Mvc;
 
 
     [ApiController]
-    [Route("[Controller]")] 
+    [Route("[Controller]")]
     public class ApiController : ControllerBase
 
     {
